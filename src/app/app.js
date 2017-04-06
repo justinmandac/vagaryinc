@@ -1,6 +1,7 @@
 import React, { Component, render} from 'react'
 import AppHeader from './app-header'
 
+import PortfolioPage from './portfolio-page'
 
 export default class App extends Component {
     constructor() {
@@ -18,6 +19,7 @@ export default class App extends Component {
             <AppHeader></AppHeader>
             <div className="content">
                 {message}
+                <PortfolioPage></PortfolioPage>
             </div>            
         </main>
     }
