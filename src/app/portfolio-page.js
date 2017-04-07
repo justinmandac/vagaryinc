@@ -11,7 +11,7 @@ export default class PortfolioPage extends Component {
     }
 
     render() {
-        const {title} = this.state;
+        const {title} = this.state
 
         return <section className="page portfolio-page">
             {title}
