@@ -10,7 +10,9 @@ export default class HomePage extends Component {
     
     render() {
         return <section className="page home-page">
-            Home
+            <div className="page__content home-page__content">
+                Home
+            </div>
         </section>
     }
 }
