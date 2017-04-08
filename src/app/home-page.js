@@ -4,7 +4,8 @@ export default class HomePage extends Component {
     constructor() {
         super()
         this.state = {
-            title: 'Home'
+            title: 'Home',
+            isActive: false
         }
     }
     
@@ -15,4 +16,4 @@ export default class HomePage extends Component {
             </div>
         </section>
     }
-}
+}   
