@@ -1,4 +1,5 @@
 import React, {Component, render} from 'react'
+import 'file-loader!img/reg_logo.png'
 
 export default class HeaderLogo extends Component {
     constructor(props) {
@@ -24,7 +25,7 @@ export default class HeaderLogo extends Component {
         }
 
         return <div style={styles} className="header-logo vagary-logo">
-            VGRY
+            <img src="img/reg_logo.png" alt="logo" height="auto" width="100%"/>
         </div>
     }
 
