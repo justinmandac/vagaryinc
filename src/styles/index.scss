@@ -22,16 +22,29 @@ html, body {
     height: $header-height;
     width: 100%;
     position: absolute;
+    clear: both;
 }
-
+.app-header__inner::after {
+    clear:both;
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
 /*
     Page Styles
 */
 
 .page {
     min-height: 100vh;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 .home-page__content {
     padding-top: $header-height + 16px;
+}
+
+.header-logo {
+    float: left;
 }
