@@ -8,13 +8,14 @@ export default class App extends Component {
     constructor() {
         super()
         this.state = {
-            activePage: 'home'
+            activePage: 'home',
+            isMenuActive: false
         }
     }
     
     render() {
         return <main className="main">
-            <AppHeader></AppHeader>
+            <AppHeader isMenuActive={this.state.isMenuActive}></AppHeader>
             <div className="content">
                 <HomePage></HomePage>
                 <PortfolioPage></PortfolioPage>
