@@ -1,5 +1,6 @@
 import React, {Component, render} from 'react'
 import HeaderLogo from './header-logo'
+import HeaderMenuButton from './header-menu-button'
 
 export default class AppHeader extends Component {
     constructor() {
@@ -12,7 +13,8 @@ export default class AppHeader extends Component {
     render() {
         return  <header className="app-header">
                     <div className="app-header__inner">
-                        <HeaderLogo></HeaderLogo>
+                        <HeaderLogo width="64" height="64"></HeaderLogo>
+                        <HeaderMenuButton></HeaderMenuButton>
                     </div>
                  </header>
     }
