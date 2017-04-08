@@ -10,6 +10,10 @@ export default class HeaderMenuButton extends Component {
         }
     }
 
+    handleMenuClick = () => {
+        console.log(`Menu Button clicked`)
+    }
+
     render() {
         const style = {
             height: `64px`,
@@ -26,7 +30,9 @@ export default class HeaderMenuButton extends Component {
             height: `24px`
         }
         return <div style={style} className="app-header__menu-button">
-           <div style={iconStyle} className="app-header__menu-button__inner app-header__menu-icon">
+           <div style={iconStyle}
+                onClick={this.handleMenuClick} 
+                className="app-header__menu-button__inner app-header__menu-icon">
                <img src="img/menu.svg" height="100%" width="100%"/>
            </div>
         </div>
