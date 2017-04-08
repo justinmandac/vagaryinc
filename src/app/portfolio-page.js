@@ -6,7 +6,7 @@ export default class PortfolioPage extends Component {
         this.state = {
             title : 'Portfolio',
             items : [],
-            active: false
+            isActive: false
         }
     }
 
