@@ -1,21 +1,26 @@
 import React, {Component, render} from 'react'
 import HeaderLogo from './header-logo'
 import HeaderMenuButton from './header-menu-button'
+import AppMenu from './app-menu'
 
 export default class AppHeader extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             menuOpened: false
         }
     }
 
     render() {
-        return  <header className="app-header">
-                    <div className="app-header__inner">
-                        <HeaderLogo width="64" height="64"></HeaderLogo>
-                        <HeaderMenuButton></HeaderMenuButton>
-                    </div>
-                 </header>
+        return  <div className="app-header-wrapper">
+                    <header className="app-header">
+                        <div className="app-header__inner">
+                            <HeaderLogo width="64" height="64"></HeaderLogo>
+                            <HeaderMenuButton></HeaderMenuButton>
+                        </div>
+                    </header>
+                 <AppMenu></AppMenu>            
+        </div>
+                 
     }
 }

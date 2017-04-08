@@ -9,6 +9,11 @@ html, body {
     padding: 0;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+}
+
 .main {
     min-height: 100vh;
     position: relative;
@@ -47,4 +52,21 @@ html, body {
 
 .header-logo {
     float: left;
+}
+
+.app-menu {
+    list-style: none;
+}
+
+.app-menu-wrapper {
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #434343;
+}
+
+.app-menu__item {
+    color: #FFF;
+    width: 100%;
+    text-align: center;
 }
