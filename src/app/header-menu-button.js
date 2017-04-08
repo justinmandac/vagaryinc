@@ -1,4 +1,5 @@
 import React, {Component, render} from 'react'
+import 'file-loader!img/menu.svg'
 
 export default class HeaderMenuButton extends Component {
     constructor(props) {
@@ -14,11 +15,19 @@ export default class HeaderMenuButton extends Component {
             height: `64px`,
             width: `64px`,
             padding: `8px`,
-            float: 'right'
+            float: 'right',
+            display: 'flex'
+        }
+
+        const iconStyle = {
+            cursor: 'pointer',
+            margin: 'auto',
+            width: `24px`,
+            height: `24px`
         }
         return <div style={style} className="app-header__menu-button">
-           <div className="app-header__menu-button__inner">
-               M 
+           <div style={iconStyle} className="app-header__menu-button__inner app-header__menu-icon">
+               <img src="img/menu.svg" height="100%" width="100%"/>
            </div>
         </div>
     }
