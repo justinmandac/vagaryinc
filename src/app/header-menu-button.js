@@ -12,6 +12,10 @@ export default class HeaderMenuButton extends Component {
 
     handleMenuClick = () => {
         console.log(`Menu Button clicked`)
+        this.setState({
+            pressed: !this.state.pressed
+        })
+        console.log(this.state.pressed)
     }
 
     render() {
