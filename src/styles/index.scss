@@ -1,3 +1,4 @@
+$header-height: 64px;
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -18,5 +19,19 @@ html, body {
 */
 
 .app-header {
-    height: 64px;
+    height: $header-height;
+    width: 100%;
+    position: absolute;
+}
+
+/*
+    Page Styles
+*/
+
+.page {
+    min-height: 100vh;
+}
+
+.home-page__content {
+    padding-top: $header-height + 16px;
 }
