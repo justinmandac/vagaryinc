@@ -15,12 +15,29 @@ export default class App extends Component {
     
     menuChanged = (c) => {
         console.debug(`menu changed`, c)
+        this.setState({
+            isMenuActive: c
+        });
     }
 
-    render() {
+    render() {        
+        const {isMenuActive} = this.state;
+        /* Use below styles to hide the main content when the menu is activated */
+        let style = {
+            overflowY: 'hidden',
+            height: '100vh'
+        }
+
+        if(!isMenuActive) {
+            /*
+                Clear styles if menu is not active; 
+            */
+            style = {}
+        }
+
         return <main className="main">
             <AppHeader menuChangedCallback={this.menuChanged}></AppHeader>
-            <div className="content">
+            <div style={style} className="content">
                 <HomePage></HomePage>
                 <PortfolioPage></PortfolioPage>
             </div>            

@@ -12,10 +12,10 @@ export default class AppHeader extends Component {
     }
 
     handleMenuClick = () => {
-        this.props.menuChangedCallback(this.state);
         this.setState({
             menuOpened: !this.state.menuOpened
         })        
+        this.props.menuChangedCallback(!this.state.menuOpened)
     }
 
     render() {

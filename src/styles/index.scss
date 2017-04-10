@@ -30,7 +30,7 @@ ul {
     position: absolute;
     clear: both;
 }
-.app-header__inner::after {
+.app-header__inner::after, .clearfix::after {
     clear:both;
     content: "";
     display: block;
