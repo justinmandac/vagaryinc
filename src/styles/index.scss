@@ -64,6 +64,7 @@ ul {
     width: 100%;
     min-height: 100vh;
     background-color: #AE4475;
+    transition: transform 0.3s ease-out;
 }
 
 .app-menu__item {
