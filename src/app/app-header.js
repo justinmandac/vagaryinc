@@ -11,15 +11,23 @@ export default class AppHeader extends Component {
         }
     }
 
+    handleMenuClick = () => {
+        this.props.menuChangedCallback(this.state);
+        this.setState({
+            menuOpened: !this.state.menuOpened
+        })        
+    }
+
     render() {
         return  <div className="app-header-wrapper">
                     <header className="app-header">
                         <div className="app-header__inner">
                             <HeaderLogo width="64" height="64"></HeaderLogo>
-                            <HeaderMenuButton></HeaderMenuButton>
+                            <HeaderMenuButton handleMenuClick={this.handleMenuClick}>                                
+                            </HeaderMenuButton>
                         </div>
                     </header>
-                 <AppMenu></AppMenu>            
+                 <AppMenu opened={this.state.menuOpened} handleCloseClicked={this.handleMenuClick}></AppMenu>            
         </div>
                  
     }

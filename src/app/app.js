@@ -13,9 +13,13 @@ export default class App extends Component {
         }
     }
     
+    menuChanged = (c) => {
+        console.debug(`menu changed`, c)
+    }
+
     render() {
         return <main className="main">
-            <AppHeader isMenuActive={this.state.isMenuActive}></AppHeader>
+            <AppHeader menuChangedCallback={this.menuChanged}></AppHeader>
             <div className="content">
                 <HomePage></HomePage>
                 <PortfolioPage></PortfolioPage>

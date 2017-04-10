@@ -1,5 +1,7 @@
 import React, {Component, render} from 'react'
 import 'file-loader!img/menu.svg'
+import 'file-loader!img/CLOSE.svg'
+
 
 export default class HeaderMenuButton extends Component {
     constructor(props) {
@@ -8,14 +10,6 @@ export default class HeaderMenuButton extends Component {
             pressed: false,
             visible: true
         }
-    }
-
-    handleMenuClick = () => {
-        console.log(`Menu Button clicked`)
-        this.setState({
-            pressed: !this.state.pressed
-        })
-        console.log(this.state.pressed)
     }
 
     render() {
@@ -33,11 +27,21 @@ export default class HeaderMenuButton extends Component {
             width: `24px`,
             height: `24px`
         }
+
+        const type = this.props.iconType || 'menu';
+        let button;
+
+        if(type === 'menu') {
+            button = <img src="img/menu.svg" height="100%" width="100%"/>
+        } else {
+            button = <img src="img/CLOSE.svg" height="100%" width="100%"/>
+        }
+
         return <div style={style} className="app-header__menu-button">
            <div style={iconStyle}
-                onClick={this.handleMenuClick} 
+                onClick={this.props.handleMenuClick} 
                 className="app-header__menu-button__inner app-header__menu-icon">
-               <img src="img/menu.svg" height="100%" width="100%"/>
+                {button}
            </div>
         </div>
     }
