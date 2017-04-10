@@ -1,4 +1,4 @@
-import React, { Component, render} from 'react'
+import React, { Component} from 'react'
 import AppHeader from './app-header'
 
 import PortfolioPage from './portfolio-page'
@@ -14,14 +14,14 @@ export default class App extends Component {
     }
     
     menuChanged = (c) => {
-        console.debug(`menu changed`, c)
+        console.debug('menu changed', c)
         this.setState({
             isMenuActive: c
-        });
+        })
     }
 
     render() {        
-        const {isMenuActive} = this.state;
+        const {isMenuActive} = this.state
         /* Use below styles to hide the main content when the menu is activated */
         let style = {
             overflowY: 'hidden',

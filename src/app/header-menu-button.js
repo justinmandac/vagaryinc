@@ -1,4 +1,4 @@
-import React, {Component, render} from 'react'
+import React, {Component} from 'react'
 import 'file-loader!img/menu.svg'
 import 'file-loader!img/CLOSE.svg'
 
@@ -14,9 +14,9 @@ export default class HeaderMenuButton extends Component {
 
     render() {
         const style = {
-            height: `64px`,
-            width: `64px`,
-            padding: `8px`,
+            height: '64px',
+            width: '64px',
+            padding: '8px',
             float: 'right',
             display: 'flex'
         }
@@ -24,12 +24,12 @@ export default class HeaderMenuButton extends Component {
         const iconStyle = {
             cursor: 'pointer',
             margin: 'auto',
-            width: `24px`,
-            height: `24px`
+            width: '24px',
+            height: '24px'
         }
 
-        const type = this.props.iconType || 'menu';
-        let button;
+        const type = this.props.iconType || 'menu'
+        let button
 
         if(type === 'menu') {
             button = <img src="img/menu.svg" height="100%" width="100%"/>

@@ -4,6 +4,7 @@
         "es6": true
     },
     "extends": "eslint:recommended",
+    "parser": "babel-eslint",
     "parserOptions": {
         "ecmaFeatures": {
             "experimentalObjectRestSpread": true,
@@ -12,13 +13,18 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react", 
+        "import"
     ],
+    "settings" : {
+        "react" : {
+            "pragma" : "React"
+        }
+    },
     "rules": {
-        "indent": [
-            "error",
-            "4"
-        ],
+        "indent": 2,
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
         "linebreak-style": [
             "error",
             "windows"
@@ -30,6 +36,7 @@
         "semi": [
             "error",
             "never"
-        ]
+        ],
+        "no-console" : "off"
     }
 }

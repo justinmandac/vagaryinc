@@ -1,4 +1,4 @@
-import React, {Component, render} from 'react'
+import React, {Component} from 'react'
 import HeaderLogo from './header-logo'
 import HeaderMenuButton from './header-menu-button'
 import AppMenu from './app-menu'

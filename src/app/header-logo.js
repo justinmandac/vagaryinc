@@ -1,4 +1,5 @@
-import React, {Component, render} from 'react'
+/** @jsx */
+import React, {Component} from 'react'
 import 'file-loader!img/reg_logo.png'
 
 export default class HeaderLogo extends Component {
@@ -11,17 +12,17 @@ export default class HeaderLogo extends Component {
         }
     }
 
-    render(props) {
+    render() {
         console.log(this.props)
         const width = this.props.width || this.state.width 
         const height = this.props.height || this.state.height
         const styles = {
             width: `${width}px`,
             height: `${height}px`, 
-            paddingTop : `8px`,
-            paddingBottom: `8px`,
-            paddingLeft: `8px`,
-            paddingRight: `8px`
+            paddingTop : '8px',
+            paddingBottom: '8px',
+            paddingLeft: '8px',
+            paddingRight: '8px'
         }
 
         return <div style={styles} className="header-logo vagary-logo">

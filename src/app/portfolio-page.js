@@ -1,4 +1,4 @@
-import React, {Component, render} from 'react'
+import React, {Component} from 'react'
 
 export default class PortfolioPage extends Component {
     constructor() {
