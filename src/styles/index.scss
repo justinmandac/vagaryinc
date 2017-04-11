@@ -30,7 +30,8 @@ ul {
     position: absolute;
     clear: both;
 }
-.app-header__inner::after, .clearfix::after {
+.app-header__inner::after, 
+.clearfix::after {
     clear:both;
     content: "";
     display: block;
@@ -45,6 +46,13 @@ ul {
     min-height: 100vh;
     padding-left: 8px;
     padding-right: 8px;
+}
+
+.home-page {
+    background-image: url('/img/GUESTROOM_REV4.jpg');
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-position-y: 60%;
 }
 
 .home-page__content {
