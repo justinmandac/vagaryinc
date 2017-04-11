@@ -1,7 +1,8 @@
-var path = require('path');
+/* eslint-env node */
+var path = require('path')
 
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
     entry: './src/main.js',
@@ -26,7 +27,7 @@ module.exports = {
                 })
             },
             {
-                test: /\.(jpe?g|png|gif|svg)$/i,
+                test: /\.(jpg|png|gif|svg)$/i,
                 loader: 'file-loader?name=/img/[name].[ext]'
             }
         ]
@@ -44,4 +45,4 @@ module.exports = {
             path.resolve('./node_modules')
         ]
     }
-};
+}

@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import 'img/GUESTROOM_REV4.jpg'
 
 export default class HomePage extends Component {
     constructor() {
