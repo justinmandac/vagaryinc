@@ -14,21 +14,21 @@ export default class AppHeader extends Component {
     handleMenuClick = () => {
         this.setState({
             menuOpened: !this.state.menuOpened
-        })        
+        })
         this.props.menuChangedCallback(!this.state.menuOpened)
     }
 
     render() {
         return  <div className="app-header-wrapper">
                     <header className="app-header">
-                        <div className="app-header__inner">
+                        <div className="app-header__inner clearfix">
                             <HeaderLogo width="64" height="64"></HeaderLogo>
-                            <HeaderMenuButton handleMenuClick={this.handleMenuClick}>                                
+                            <HeaderMenuButton handleMenuClick={this.handleMenuClick}>
                             </HeaderMenuButton>
                         </div>
                     </header>
-                 <AppMenu opened={this.state.menuOpened} handleCloseClicked={this.handleMenuClick}></AppMenu>            
+                 <AppMenu opened={this.state.menuOpened} handleCloseClicked={this.handleMenuClick}></AppMenu>
         </div>
-                 
+
     }
 }

@@ -1,0 +1,14 @@
+/*
+    Header styles
+*/
+
+.app-header {
+    height: $header-height;
+    width: 100%;
+    position: absolute;
+    clear: both;
+}
+
+.header-logo {
+    float: left;
+}
