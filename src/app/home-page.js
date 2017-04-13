@@ -9,12 +9,19 @@ export default class HomePage extends Component {
             isActive: false
         }
     }
-    
+
     render() {
         return <section className="page home-page">
             <div className="page__content home-page__content">
-                Home
+                <div className="branding-container">
+                    <div className="branding">
+                        Vagary, Inc.
+                    </div>
+                    <div>
+                        Interior Design
+                    </div>
+                </div>
             </div>
         </section>
     }
-}   
+}

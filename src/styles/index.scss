@@ -1,22 +1,11 @@
+@import "reset";
+
 @import "bourbon/bourbon";
 @import "neat/neat";
 @import "variables";
 
 @import "header";
-
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-}
+@import "typography";
 
 .clearfix::after {
     clear:both;
@@ -47,11 +36,16 @@ ul {
     background-repeat: no-repeat;
     background-position-x: 90%;
     background-position-y: 60%;
+    display: flex;
+
+    .home-page__content {
+        margin: auto 0;
+    }
 }
 
-.home-page__content {
-    padding-top: $header-height + 16px;
-}
+
+
+
 
 .app-menu {
     list-style: none;

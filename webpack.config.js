@@ -9,7 +9,7 @@ module.exports = {
     output : {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
-    },  
+    },
     module : {
         rules: [
             {
@@ -29,6 +29,10 @@ module.exports = {
             {
                 test: /\.(jpg|png|gif|svg)$/i,
                 loader: 'file-loader?name=/img/[name].[ext]'
+            },
+            {
+                test: /\.(eot|woff|woff2|ttf)$/i,
+                loader: 'file-loader?name=/fonts/[name].[ext]'
             }
         ]
     },
